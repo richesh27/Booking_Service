@@ -9,10 +9,11 @@ const bookingController = new BookingController();
 
 //here goes the corresponding routes
 
-router.post('/bookings',function(req, res){
-    bookingController.Create
-  });
+// router.post('/bookings',function(req, res){
+//     bookingController.Create
+//   });
 
-  router.post ('/publish', bookingController.sendMessageToQueue);
+router.post ('/bookings', bookingController.create);
+router.post ('/publish', bookingController.sendMessageToQueue);
 
 module.exports = router;
